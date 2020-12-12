@@ -1,6 +1,12 @@
-.don {
+* {
   text-align: center;
 }
+a {
+  color: transparent;
+}
+.don {
+  font-family: 'Comfortaa', cursive;
+}
 .time {
-  text-align: center;
+  font-family: 'Kelly Slab', cursive;
 }
