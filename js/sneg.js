@@ -1,5 +1,5 @@
 var snow_img = "snow.gif";                                     
-var snow_no = 15;                                                 
+var snow_no = 560;                                                 
 var timeszimaon = 1;         
 
 var dorn = "";
