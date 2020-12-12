@@ -5,8 +5,10 @@ setInterval(function () {
     var hours = today.getHours();
     dorn = "Night"
     document.body.style.backgroundColor = "#000000";
-   document.getElementById("DON").style.color = '#ffffff'; 
-   document.getElementById("Time").style.color = '#ffffff'; 
+    document.getElementById("DON").style.color = '#ffffff'; 
+    document.getElementById("Time").style.color = '#ffffff'; 
+    document.getElementById("vk").style.color = '#ffffff'; 
+    document.getElementById("github").style.color = '#ffffff'; 
     document.getElementById("DON").innerHTML= dorn;
   } else {
    dorn = "Day";
@@ -14,6 +16,8 @@ setInterval(function () {
   	document.body.style.backgroundColor = "#ffffff";
     document.getElementById("DON").style.color = '#000000';
     document.getElementById("Time").style.color = '#000000'; 
+    document.getElementById("vk").style.color = '#000000'; 
+    document.getElementById("github").style.color = '#000000'; 
     document.getElementById("DON").innerHTML= dorn;
   }
   if(today.getMinutes() < 10){
