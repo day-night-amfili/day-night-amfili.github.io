@@ -1,3 +1,6 @@
+var min = 0;
+var hour = 0;
+var tm = 0;
 var dorn = "";
 setInterval(function () {
   var today = new Date();
@@ -6,6 +9,8 @@ setInterval(function () {
     dorn = "Ночь"
     document.body.style.backgroundColor = "#000000";
     document.getElementById("DON").style.color = '#ffffff'; 
+    document.getElementById("se").style.color = '#000000'; 
+    document.getElementById("se").style.backgroundColor = '#ffffff'; 
     document.getElementById("Time").style.color = '#ffffff'; 
     document.getElementById("timer").style.color = '#ffffff'; 
     document.getElementById("vk").style.color = '#ffffff'; 
@@ -16,6 +21,8 @@ setInterval(function () {
 	  var hours = today.getHours();
   	document.body.style.backgroundColor = "#ffffff";
     document.getElementById("DON").style.color = '#000000';
+    document.getElementById("se").style.color = '#ffffff'; 
+    document.getElementById("se").style.backgroundColor = '#000000'; 
     document.getElementById("Time").style.color = '#000000'; 
     document.getElementById("timer").style.color = '#000000'; 
     document.getElementById("vk").style.color = '#000000'; 
@@ -38,24 +45,20 @@ setInterval(function () {
 }, 1000)
 
 
+ttimer = 0;
+se.onclick = function StartFunction() {
+  tm += 1;
+  sec = 0;
+  var ttimer = setInterval(tick, 1000);
+  if(tm === 2){
+    clearInterval(ttimer); 
+    tm -= 1;
+  }
+} 
 
-
-
-
-
-
-//Секундомер
-//изначальные переменные
-min = 0;
-hour = 0;
-//Оставляем вашу функцию
-sec = 0;
-setInterval(tick, 1000);
-
-//Основная функция tick()
 function tick() {
     sec++;
-    if (sec >= 60) { //задаем числовые параметры, меняющиеся по ходу работы программы
+    if (sec >= 60) { 
         min++;
         sec = sec - 60;
     }
@@ -63,7 +66,7 @@ function tick() {
         hour++;
         min = min - 60;
     }
-    if (sec < 10) { //Визуальное оформление
+    if (sec < 10) {
         if (min < 10) {
             if (hour < 10) {
                 document.getElementById('timer').innerHTML ='0' + hour + ':0' + min + ':0' + sec;
