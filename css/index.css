@@ -9,8 +9,16 @@ a {
   font-family: 'Comfortaa', cursive;
 }
 .timer {
+  margin-top: 50px;
   font-family: 'Kelly Slab', cursive;
 }
 .time {
   font-family: 'Kelly Slab', cursive;
+}
+.se {
+  padding: 20px;
+  border-radius: 20px;
+}
+div {
+  margin: 25px;
 }
