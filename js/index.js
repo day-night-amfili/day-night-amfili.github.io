@@ -9,6 +9,7 @@ setInterval(function () {
     dorn = "Ночь"
     document.body.style.backgroundColor = "#000000";
     document.getElementById("DON").style.color = '#ffffff'; 
+    document.getElementById("smal").style.color = '#ffffff'; 
     document.getElementById("se").style.color = '#000000'; 
     document.getElementById("se").style.backgroundColor = '#ffffff'; 
     document.getElementById("Time").style.color = '#ffffff'; 
