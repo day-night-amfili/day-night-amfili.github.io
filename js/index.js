@@ -18,8 +18,8 @@ setInterval(function () {
     document.getElementById("DON").innerHTML= dorn;
   } else {
    dorn = "День";
-	  var hours = today.getHours();
-  	document.body.style.backgroundColor = "#ffffff";
+    var hours = today.getHours();
+    document.body.style.backgroundColor = "#ffffff";
     document.getElementById("DON").style.color = '#000000';
     document.getElementById("se").style.color = '#ffffff'; 
     document.getElementById("se").style.backgroundColor = '#000000'; 
@@ -30,14 +30,14 @@ setInterval(function () {
     document.getElementById("DON").innerHTML= dorn;
   }
   if(today.getMinutes() < 10){
-	  var minutes = '0' + today.getMinutes();
+    var minutes = '0' + today.getMinutes();
   } else {
     var minutes = today.getMinutes();
   }
   if(today.getSeconds() < 10){
-	  var seconds = '0' + today.getSeconds();
+    var seconds = '0' + today.getSeconds();
   } else {
-   var seconds = today.getSeconds();
+    var seconds = today.getSeconds();
   }
   var time = hours + ":" + minutes + ":" + seconds;
 
