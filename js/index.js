@@ -9,8 +9,7 @@ setInterval(function () {
     dorn = "Ночь"
     document.body.style.backgroundColor = "#000000";
     document.getElementById("DON").style.color = '#ffffff'; 
-    document.getElementById("se").style.color = '#000000'; 
-    document.getElementById("se").style.backgroundColor = '#ffffff'; 
+
     document.getElementById("Time").style.color = '#ffffff'; 
     document.getElementById("timer").style.color = '#ffffff'; 
     document.getElementById("vk").style.color = '#ffffff'; 
@@ -21,8 +20,6 @@ setInterval(function () {
     var hours = today.getHours();
     document.body.style.backgroundColor = "#ffffff";
     document.getElementById("DON").style.color = '#000000';
-    document.getElementById("se").style.color = '#ffffff'; 
-    document.getElementById("se").style.backgroundColor = '#000000'; 
     document.getElementById("Time").style.color = '#000000'; 
     document.getElementById("timer").style.color = '#000000'; 
     document.getElementById("vk").style.color = '#000000'; 
@@ -45,54 +42,3 @@ setInterval(function () {
 }, 1000)
 
 
-ttimer = 0;
-se.onclick = function StartFunction() {
-  tm += 1;
-  sec = 0;
-  var ttimer = setInterval(tick, 1000);
-  if(tm === 2){
-    clearInterval(ttimer); 
-    tm -= 1;
-  }
-} 
-
-function tick() {
-    sec++;
-    if (sec >= 60) { 
-        min++;
-        sec = sec - 60;
-    }
-    if (min >= 60) {
-        hour++;
-        min = min - 60;
-    }
-    if (sec < 10) {
-        if (min < 10) {
-            if (hour < 10) {
-                document.getElementById('timer').innerHTML ='0' + hour + ':0' + min + ':0' + sec;
-            } else {
-                document.getElementById('timer').innerHTML = hour + ':0' + min + ':0' + sec;
-            }
-        } else {
-            if (hour < 10) {
-                document.getElementById('timer').innerHTML = '0' + hour + ':' + min + ':0' + sec;
-            } else {
-                document.getElementById('timer').innerHTML = hour + ':' + min + ':0' + sec;
-            }
-        }
-    } else {
-        if (min < 10) {
-            if (hour < 10) {
-                document.getElementById('timer').innerHTML = '0' + hour + ':0' + min + ':' + sec;
-            } else {
-                document.getElementById('timer').innerHTML = hour + ':0' + min + ':' + sec;
-            }
-        } else {
-            if (hour < 10) {
-                document.getElementById('timer').innerHTML = '0' + hour + ':' + min + ':' + sec;
-            } else {
-                document.getElementById('timer').innerHTML = hour + ':' + min + ':' + sec;
-            }
-        }
-    }
-}
