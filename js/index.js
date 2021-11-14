@@ -3,7 +3,7 @@ setInterval(function () {
   var today = new Date();
   if(today.getHours() < 6 || today.getHours() > 21){
     var hours = today.getHours();
-    dorn = "Night"
+    dorn = "Ночт"
     document.body.style.backgroundColor = "#000000";
     document.getElementById("DON").style.color = '#ffffff'; 
     document.getElementById("Time").style.color = '#ffffff'; 
@@ -11,7 +11,7 @@ setInterval(function () {
     document.getElementById("github").style.color = '#ffffff'; 
     document.getElementById("DON").innerHTML= dorn;
   } else {
-   dorn = "Day";
+   dorn = "День";
 	  var hours = today.getHours();
   	document.body.style.backgroundColor = "#ffffff";
     document.getElementById("DON").style.color = '#000000';
